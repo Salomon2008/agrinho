@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fazendinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="rr-removebg-preview.png" alt="Logo da Fazendinha">
+        <h1 class="titu">A Fazendinha</h1>
+        <input type="text" placeholder="Pesquisar...">
+    </header>
+
+    <section class="galeria">
+        <div class="card">
+            <img src="Cow_JE5_BE2.webp" alt="Vaca">
+            <h2>Vaca</h2>
+            <p>As vacas são importantes para a produção de leite e carne.</p>
+        </div>
+        <div class="card">
+            <img src="Pig_(Dungeons).webp" alt="Porco">
+            <h2>Porco</h2>
+            <p>Os porcos são criados principalmente para a produção de carne suína.</p>
+        </div>
+        <div class="card">
+            <img src="-_milho_pipoca-removebg-preview-czckqluibz.webp" alt="Milho">
+            <h2>Milho</h2>
+            <p>O milho é um alimento essencial na alimentação humana e animal.</p>
+        </div>
+        <div class="card">
+            <img src="20250222-ovicio-um-filme-minecraft.webp" alt="Ovelha">
+            <h2>Ovelha</h2>
+            <p>As ovelhas são criadas para a produção de lã, carne e leite.</p>
+    </div>
+</section>
+
+    <section class="como-funciona">
+        <h2>Como funciona</h2>
+        <p>Bem-vindo à Fazendinha! Aqui você pode aprender sobre os principais elementos de uma fazenda, como os animais e plantações. Use a barra de pesquisa acima para explorar mais!</p>
+    </section>
+</body>
+</html>
+<!-- Modal para mostrar informações detalhadas -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title">Título</h2>
+    <p id="modal-text">Texto completo com informações.</p>
+  </div>
+</div>
+
+<!-- Script do modal -->
+<script>
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalText = document.getElementById("modal-text");
+  const closeBtn = document.querySelector(".close");
+
+  const infos = {
+    "Vaca": "A vaca é um mamífero domesticado usado na produção de leite, carne e couro. Tem grande importância econômica.",
+    "Porco": "O porco é criado para a produção de carne suína. Também é conhecido por sua inteligência.",
+    "Milho": "O milho é um cereal amplamente cultivado, base da alimentação em muitas culturas, usado na indústria e ração.",
+    "Ovelha": "A ovelha fornece lã, carne (cordeiro) e leite. É um animal dócil, presente em diversas regiões do mundo."
+  };
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h2').innerText;
+      modalTitle.innerText = title;
+      modalText.innerText = infos[title] || "Informações não disponíveis.";
+      modal.style.display = "block";
+    });
+  });
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+

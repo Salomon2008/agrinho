@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ca8f53;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a8e470;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.titu {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    width: 250px;
+    height: 35px;
+    padding: 0 15px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffd9ad;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #7a6347;
+}
+
+.como-funciona {
+    background-color: #fde5b8;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.como-funciona h2 {
+    font-size: 2rem;
+    color: #4f3824;
+    margin-bottom: 15px;
+}
+
+.como-funciona p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
